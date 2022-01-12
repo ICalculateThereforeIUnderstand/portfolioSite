@@ -1,0 +1,278 @@
+
+.modal-link { /*nemoj zaboraviti da je ovaj css-selektor u konfliktu sa dinamicki zadanim id-om i njegovim pripadajucim css selektorom. id-css koristi za pozicioniranje svakog pojedinog prozora i za zadavanje njihovih visina/sirina*/
+              /*a ovaj klasni css selektor koristis za opcenita pravila koja vrijede za sve prozore*/
+/*    height: 200px;
+    width: 300px; */ /* height i width su default vrijednosti koje su aktualne jedino ako nisi zadao id*/
+    
+    background-color: white;/* #aaa; */
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    user-select: none;
+}
+
+.modal {
+    height: 100vh;
+    width: 100vw;
+    min-height: 700px;
+    top: 0px;
+    left: 0px;
+    background-color: white;
+    display: none;
+    position: fixed;
+    z-index: 4;
+}
+
+@media screen and (min-width: 500px) {
+    .modal {
+        height: 75vh;
+        width: 80vw;
+        top: 15vh;
+        left: 10vw;
+    }
+}
+
+.modal-slide {
+    height: 66%;
+    width: 100%;
+    /*background-color: green;*/
+    position: relative;
+    overflow: hidden;
+    border-bottom: 3px solid black;
+}
+
+.modal-slide-gumb-left, .modal-slide-gumb-right {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    bottom: 0px;
+    background-color: RGBA(0,0,0,0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.6s;
+    z-index: 3;
+}
+
+.modal-slide-gumb-left {
+    left: 0px;
+}
+
+.modal-slide-gumb-right {
+    right: 0px;
+}
+
+.modal-slide-gumb-left:hover, .modal-slide-gumb-right:hover {
+    background-color: RGBA(0,0,0,0.8);
+    cursor: pointer;
+}
+
+.modal-slide-gumb-ikona {
+    height: 60%;
+    width: 60%;
+    color: white;
+}
+
+.modal-slide-trenutni {
+    opacity: 1;
+    transform: translate(0%, 0%);
+}
+
+.modal-slide-prethodni {
+    opacity: 0;
+    transform: translate(-100%, 0%);
+}
+
+.modal-slide-sljedeci {
+    opacity: 0;
+    transform: translate(100%, 0%);
+    z-index: 2;
+}
+
+.modal-panel {
+    height: 34%;
+    width: 100%;
+    background-color: white; /*#91f1f2;*/
+    position: relative;
+}
+
+.modal-panel-el1 {
+    height: 37%;
+    width: 86%;
+    /*background-color: blue;*/
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal-panel-el2 {
+    height: 55%;
+    width: 90%;
+    /*background-color: red;*/
+    overflow: auto;
+}
+
+.modal-panel-naslov {
+    margin: 0px;
+    padding: 0px 0px 0px 15px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #333;
+}
+
+.modal-panel-naslov1 {
+    margin: 0px;
+    padding: 0px 0px 0px 15px;
+    font-size: 18px;
+    font-weight: 600;
+    color: grey;
+}
+
+
+.modal-panel-crta {
+    height: 1.5px;
+    width: 80%;
+    margin: 10px 0px 0px 15px;
+    background-color: grey;
+}
+
+.modal-panel-tekst {
+    margin: 0px;
+    padding: 10px 15px 0px 15px;
+}
+
+.modal-panel-button { 
+    position: absolute;
+    top: 26%;
+    right: 3%;
+    /*background-color: pink;*/
+    height: 35px;
+    width: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: grey;
+    transition: color 0.5s;
+}
+
+.modal-panel-button-ikona {
+    height: 60%;
+    width: 60%;
+    
+}
+
+.modal-panel-button:hover {
+    color: black;
+    cursor: pointer;
+}
+
+.modal-panel-link {
+    position: absolute;
+    top: 5%;
+    right: 2%;
+    max-width: 15%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: red;
+    color: white;
+    padding: 10px 13px 10px 13px;
+    font-size: 12px;
+    transition: background-color 0.6s, color 1.2s;
+    border-radius: 3px;
+}
+
+.modal-panel-link:hover {
+    cursor: pointer;
+    background-color: white;
+    color: red;
+}
+
+.modal-nevidljivi {
+    height: 100vh;
+    width: 100vw;
+    background-color: RGBA(0,0,0,0.5);
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+}
+
+.modal-plast {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transition: opacity 0.7s;
+}
+
+.modal-naslov {
+    width: 90%;
+    height: 30%;
+    /*background-color: green;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    transition: top 0.7s, opacity 0.7s;
+}
+
+.modal-naslov-p1 {
+    margin: 0px;
+    font-weight: 600;
+    font-size: 140%;
+}
+
+.modal-naslov-p2 {
+    margin: 0px;
+    font-size: 100%;
+    color: red;
+}
+
+.modal-button {
+    width: 45%;
+    height: 20%;
+    border: 2px solid red;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #444;
+    transition: background-color 0.5s, top 0.7s, opacity 0.7s;
+    position: relative;
+}
+
+.modal-button:hover {
+    background-color: red;
+    color: white;
+    cursor: pointer;
+}
+
+#modal-el, #modal-el1, #modal-el2, #modal-el3, #modal-el4, #modal-el5, #modal-el6, #modal-el7, #modal-el8, #modal-el9 {
+    height: 300px;
+    width: 400px;
+    max-width: 99%;
+}
+
+#modal-el { background-color: blue;}/*#f4d39d; }*/
+#modal-el1 { background-color: #999999; }
+#modal-el2 { background-color: #baf5f3; }
+
+[id^="modal-marker"] { 
+    position: relative;
+    top: 0px;
+    left: 0px;
+    transition: all 2s;
+}
+
+
+
+
