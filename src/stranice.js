@@ -420,11 +420,10 @@ export function Page19({klasa="", jezik="en"}) {
 	        <img src="./slike/pang1.jpg" alt="pocetna stranica" className="page12-slika"/>
 	        <div className="page12-el" ref={hoverRef}>
 	            {lang === "hr" ? <>
-	                <p className="page12-el-tekst page19-el-tekst-dodatno">Ova igrica je u ovom trenutku skoro dovršena (panic mode) - potrebno je još napraviti animaciju igrača za što mi treba tzv "animation sprite" - velika slika sa redom manjih podslika koje predstavljaju pojedine frameove (vjerujem da će biti u svg formatu). Za izradu tog sprite-a sam planirao angažirati profesionalce sa fiverr ili upworka. Također potrebno je igricu malo narihtati radi poboljšanja igrivosti (brzina loptica, uvesti ubrzanja lopta sa povečanjem nivoa, uvesti svg grafiku loptica umjesto okruglih div elemenata, uvesti promjenjive pozadine raznih gradova).
-Također razmišljao sam da igricu prilagodim za Hrvatsku. Tako bi pozadine prikazivale prizore iz hrvatskih gradova (npr. Trg bana Jelačića, splitska Riva, Dubrovnik itd.), a sam igrač bi nosio kockasti dres hrvatske reprezentacije.</p>
+	                <p className="page12-el-tekst page19-el-tekst-dodatno">Moja želja je bila napraviti igricu koja neće biti obična kopija originala. Zato sam odlučio kroatizirati igricu - igrač nosi hrvatski dres, u pozadini su fotografije iz hrvatskih gradova, a u budućnosti kada napravim no-panic tour mode, igrač će letjeti avionom po karti Hrvatske od jednog hrvatskog grada do drugog. Igricu sam nazvao CroPang.</p>
 	                <a href="https://github.com/ICalculateThereforeIUnderstand/html_pang" className="peti-page-el1-link page14-dodatno">GitHub</a>
 	            </> : <>
-	                <p className="page12-el-tekst page19-el-tekst-dodatno">The game is at this moment almost finished (panic mode) - now it is necessary to animate player and for that animation sprite is needed - big picture with ordered small subpictures showing individual frames, which will be in svg format. For drawing this sprite, I have planned to hire professional drawers at Fiverr or Upwork. Also the game needs little adjustments for improved gameplay (speed of balls, introduction of increases in speed for higher levels, svg graphical elements for balls instead circular HTMLs, changeable background images of different cities, etc.). Also, I have thought about croatizing the game. In that case background images would show scenes from croatian cities (for example, Square of ban Jelačić, Split's Riva, Dubrovnik, etc) and player would wear dress of croatian national soccer team (with red-white squares).</p>
+	                <p className="page12-el-tekst page19-el-tekst-dodatno">My desire was to create game which would not be plain copy of original, so I decided to croatize the game - player wears dress of croatian national soccer team (red-white squares), background images are from croatian cities, and in future when I create no-panic "tour mode", player will fly across map of Croatia from one croatian city to another. That is why I named this game CroPang.</p>
 	                <a href="https://github.com/ICalculateThereforeIUnderstand/html_pang" className="peti-page-el1-link page14-dodatno">GitHub</a>
 	            </>}
 	        </div>
@@ -563,14 +562,13 @@ export function Page25({klasa="", jezik="en"}) {
 	
 	return (
 	    <div className="page25" ref={r}>
-            {/*<img src="./slike/portfolioSite.jpg" alt="radni display" className="page24-slika"/>*/}
             <div className="page12-el" ref={hoverRef}>
 	            {lang === "hr" ? <>
 	                <p className="page12-el-tekst page19-el-tekst-dodatno">Kod ovog projekta možete pogledati na sljedećem linku:</p>
-	                <a href="https://github.com/ICalculateThereforeIUnderstand/react_minesweeper" className="peti-page-el1-link page14-dodatno">GitHub</a>
+	                <a href="https://github.com/ICalculateThereforeIUnderstand/portfolioSite" className="peti-page-el1-link page14-dodatno">GitHub</a>
 	            </> : <>
 	                <p className="page12-el-tekst page19-el-tekst-dodatno">You can see the source code of this project at:</p>
-	                <a href="https://github.com/ICalculateThereforeIUnderstand/react_minesweeper" className="peti-page-el1-link page14-dodatno">GitHub</a>
+	                <a href="https://github.com/ICalculateThereforeIUnderstand/portfolioSite" className="peti-page-el1-link page14-dodatno">GitHub</a>
 	            </>}
 	        </div>
 	    </div>
