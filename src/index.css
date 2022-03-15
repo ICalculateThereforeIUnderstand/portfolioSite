@@ -322,7 +322,7 @@ html, body {
 }
 
 .druga-stranica-el2 {
-    height: 500px;
+    height: 550px;
     width: 100%;
     /*background-color: yellow;*/
     display: flex;
@@ -581,6 +581,7 @@ html, body {
 #modal-pointer8 { top: 2355px;}
 #modal-pointer9 { top: 2670px;}
 #modal-pointer10 { top: 2985px;}
+#modal-pointer11 { top: 3300px;}
 
 @media screen and (min-width: 830px) {
     #modal-pointer1, #modal-pointer2 { top: 150px; }
@@ -588,6 +589,7 @@ html, body {
     #modal-pointer5, #modal-pointer6 { top: 780px; }
     #modal-pointer7, #modal-pointer8 { top: 1095px; }
     #modal-pointer9, #modal-pointer10 { top: 1410px; }
+    #modal-pointer11 { top: 1725px; }
 }
 
 @media screen and (min-width: 600px) {

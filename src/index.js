@@ -13,7 +13,7 @@ import { useSelector, useDispatch } from 'react-redux';
 
 import { PrvaStranica as PrviPage, DrugaStranica  as DrugiPage, TrecaStranica as TreciPage, 
 	     CetvrtaStranica as CetvrtiPage, PetiPage, SestiPage, SedmiPage, OsmiPage, DevetiPage, DesetiPage, Page11,
-	     Page12, Page13, Page14, Page15, Page16, Page17, Page19, Page22, Page23, Page24, Page25 } from "./stranice.js";
+	     Page12, Page13, Page14, Page15, Page16, Page17, Page19, Page22, Page23, Page24, Page25, Page26, Page27, Page28 } from "./stranice.js";
 import { Page18, Page20, Page21 } from "./animiraneStranice.js";
 
 
@@ -131,7 +131,8 @@ function TrecaStranica() {
 	const [data6, setData6] = React.useState({}); 
 	const [data7, setData7] = React.useState({});
 	const [data8, setData8] = React.useState({});  
-	const [data9, setData9] = React.useState({});  
+	const [data9, setData9] = React.useState({});
+	const [data10, setData10] = React.useState({});    
 	
 	React.useEffect(() => {
 		dispatch(postaviHoverSw(hoverCapability("hoverTest")));
@@ -178,6 +179,10 @@ function TrecaStranica() {
 	        setData9({"naslov": "THIS SITE", "jezik": "REACT/REDUX/JAVASCRIPT", "naslovSize": 17, "slikaUrl": "./slike/portfolioSite.jpg", modalID: "modal-el9",
 	        "panelNaslov": "THIS SITE", "panelNaslov1": "REACT/REDUX/JAVASCRIPT", "panelTekst": "This is my personal portfolio site. Beside React, I have used JavaScript and Redux. Use of Redux in this project was probably overkill, but reason I used it was exercise and demonstration of skill. Code of entire site can be found at my github account.",
 	        "siteUrl": "https://savicslobodan.com/portfolioSite", "stranice": [Page25]});
+	        
+	        setData10({"naslov": "WEB SITE OF RESTAURANT", "jezik": "HTML/CSS/Bootstrap", "naslovSize": 17, "slikaUrl": "./slike/naslovnaSofra.jpg", modalID: "modal-el10",
+	        "panelNaslov": "Web site of restaurant", "panelNaslov1": "HTML/CSS/Bootstrap", "panelTekst": "This was my final exam of self-learning Bootstrap course. I have created a replica of a real commercial web site for Zagreb`s restaurant The Sofra. I have done similar project for same restaurant one year ago in Wordpress. In this project main goal was to exercise application of Bootstrap, to apply more advance parallax effects using my own parallax library for moving elements and backgrounds in real time during scrolling. I have also used this opportunity to write library for customizable scrolling of pages. This library enables web-designer to adjust speed and pattern of scrolling on internet pages when for example, hyperlink is clicked (using Bezier curves which tell browser how to scroll page frame-by-frame).",
+	        "siteUrl": "https://savicslobodan.com/sofra1", "stranice": [Page26, Page27, Page28]});
 	    } else {
 			setData({"naslov": "Web knjižara", "jezik": "PHP", "naslovSize": 18, "slikaUrl": "./slike/demetra.jpg", modalID: "modal-el",
 	        "panelNaslov": "Online knjižara web site + PHP web aplikacija", "panelNaslov1": "PHP/HTML/CSS", "panelTekst": "Ovaj projekt se sastojao od web-stranice za knjižaru, baze podataka sa knjigama i web-aplikacije (privatna stranica pod šifrom) za managment baze podataka i same stranice. Ideja je bila napraviti kompletno riješenje za malu obiteljsku firmu koja prodaje knjige, gdje je moguće kroz manager upravljati web-stranicom, podacima o knjigama i podacima o skladištima knjiga. User-interface managera morao je biti intuitivan, upotrebljiv od strane ispodprosječnog korisnika računala koji ni ne zna što je baza podataka (čitaj moja majka od 65 god).",
@@ -218,6 +223,10 @@ function TrecaStranica() {
 	        setData9({"naslov": "OVAJ SITE", "jezik": "REACT/REDUX/JAVASCRIPT", "naslovSize": 17, "slikaUrl": "./slike/portfolioSite.jpg", modalID: "modal-el9",
 	        "panelNaslov": "OVAJ SITE", "panelNaslov1": "REACT/REDUX/JAVASCRIPT", "panelTekst": "Ovo je moj osobni portfolio site. Osim Reacta koristio sam i JavaScript te Redux, za kojim nije bilo velike potrebe, a glavni razlog je bio vježba i demonstracija vještine. Kod cijelog sitea se nalazi na mojem accountu na githubu.",
 	        "siteUrl": "https://savicslobodan.com/portfolioSite", "stranice": [Page25]});
+	        
+	        setData10({"naslov": "WEB STRANICA RESTORANA", "jezik": "HTML/CSS/Bootstrap", "naslovSize": 17, "slikaUrl": "./slike/naslovnaSofra.jpg", modalID: "modal-el10",
+	        "panelNaslov": "Web site restorana", "panelNaslov1": "HTML/CSS/Bootstrap", "panelTekst": "Ovo je bio moj završni projekt učenja Bootstrapa. Napravio sam repliku pravog komercijalnog web sitea poznatog zagrebačkog restorana Sofra. Slični site sam napravio i prije godinu dana u Wordpressu. U ovom projektu sam iskoristio priliku i primjenio sam naprednije tehnike paralaks grafičkih efekata, i to korištenjem vlastitog javascript librarija za pomake elemenata i backgrounda u realnom vremenu. Također sam iskoristio priliku za razvoj librarija za prilagodljiv scrolling frame-by-frame ekrana. Moj novi library omogućuje potpunu prilagodljivost brzine i oblika skrolanja ekrana prilikom klika na hiperlink (korištenjem Bezierovih krivulja).",
+	        "siteUrl": "https://savicslobodan.com/sofra1", "stranice": [Page26, Page27, Page28]});
 	    }
 	
     }, [jezik]);
@@ -268,6 +277,9 @@ function TrecaStranica() {
 	            <div id="modal-marker9">
 	                <Modal {...data9}/>
 	            </div>
+	            <div id="modal-marker10">
+	                <Modal {...data10}/>
+	            </div>
 	            <MoveElement1 vel={0} idPointera="modal-pointer1" idElementa="modal-marker" pomak="r" velPomak="100vw" oneWay={true}/>
 	            <MoveElement1 vel={0} idPointera="modal-pointer2" idElementa="modal-marker1" pomak="l" velPomak="100vw" oneWay={true}/>
 	            <MoveElement1 vel={0} idPointera="modal-pointer3" idElementa="modal-marker2" pomak="r" velPomak="100vw" oneWay={true}/>
@@ -278,6 +290,7 @@ function TrecaStranica() {
 	            <MoveElement1 vel={0} idPointera="modal-pointer8" idElementa="modal-marker7" pomak="l" velPomak="100vw" oneWay={true}/>
 	            <MoveElement1 vel={0} idPointera="modal-pointer9" idElementa="modal-marker8" pomak="r" velPomak="100vw" oneWay={true}/>
 	            <MoveElement1 vel={0} idPointera="modal-pointer10" idElementa="modal-marker9" pomak="l" velPomak="100vw" oneWay={true}/>
+	            <MoveElement1 vel={0} idPointera="modal-pointer11" idElementa="modal-marker10" pomak="r" velPomak="100vw" oneWay={true}/>
 	        </div>
             <div className="treca-stranica-space">
             </div>
@@ -355,7 +368,6 @@ function App() {
 
 ReactDOM.render(
         <App/>,
-        cont
-    
+        cont   
 )
 

@@ -442,6 +442,15 @@
     background-color: green;
 }
 
+.page27-dodatno {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.page27-dodatno:hover {
+    background-color: green;
+}
+
 .page15-dodatno {
     background-color: #e8c394;
 }
@@ -653,6 +662,17 @@
     width: 80%;
 }
 
+.page26-slika {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.page26 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 @media screen and (min-width: 660px) {
     .page24-slika {
         width: 45%;
@@ -679,6 +699,7 @@
     background-position: center;
     background-size: cover;
 }
+
 
 /*@media screen and (max-width: 400px) {*/
 @media (hover: none) {

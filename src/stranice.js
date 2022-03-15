@@ -134,17 +134,26 @@ export function TrecaStranica({klasa="", jezik="en"}) {
 	const [r, lang] = useZajednickaLogika(klasa, jezik);
 	const [hoverRef] = useHoverLogika(); 
 	
+	const r1 = React.useRef();
+	
+	React.useEffect(()=>{
+		if (false) {
+			r1.current.style.display = "none";
+			
+		}
+	}, [])
+	
 	return (
 	    <div className="treci-page" ref={r}>
 	        <img src="./slike/manager.jpg" alt="manager" className="treci-page-slika"/>
 	        <div className="treci-page-el" ref={hoverRef}>
 	            {lang == "hr" ? <>
 	                <p className="treci-page-el-naslov">Manager</p>
-	                <p className="treci-page1-el-tekst">Pristup manageru baze podataka moguć je preko privatne šifrirane stranice. Moguće je u gornjem izborniku odabrati između tri panela. U panelu "knjige" (na slici) moguće je dodavati/oduzimati knjige, mijenjati im podatke, pretraživati knjige. Svakoj knjizi pridružen je jedan ili više autora, ostali podaci, te jedna ili više adresa u jednom ili više skladišta knjiga plus kvantitet knjiga po adresama skladišta. Bazu podataka sam zamislio tako da se ne koristi samo za web-stranicu, vec kao i alat za evidenciju skladišta. Moguće je vidjeti količine knjiga na raspolaganju i skladišta/adrese na kojima se nalaze.</p>
+	                <p className="treci-page1-el-tekst">Pristup manageru baze podataka moguć je preko privatne šifrirane stranice. Moguće je u gornjem izborniku odabrati između tri panela. U panelu "knjige" (na slici) moguće je dodavati/oduzimati knjige, mijenjati im podatke, pretraživati knjige. Svakoj knjizi pridružen je jedan ili više autora, ostali podaci, te jedna ili više adresa u jednom ili više skladišta knjiga plus kvantitet knjiga po adresama skladišta. Bazu podataka sam zamislio tako da se ne koristi samo za web-stranicu, vec kao i alat za evidenciju skladišta. Moguće je vidjeti količine knjiga na raspolaganju i skladišta/adrese na kojima se nalaze. <span ref={r1}>LOZINKA za pristup manageru je filozof2378</span></p>
 	                <a href="http://www.savicslobodan.com/demetra/login.php" className="treci-page-el-link">VIEW SITE</a>
 	            </> : <>  
 	                <p className="treci-page-el-naslov">Manager</p>
-	                <p className="treci-page1-el-tekst">Access to database manager is possible through private web page using password. In upper left menu user can choose between three manager panels. In panel "knjige" (books) shown in picture, it is possible to add/remove books, change their data and search for books in database. Each book is joined by one or more authors, other individual info and one or more addresses in one or more warehouses plus quantity in each address. Database was designed not only for web-site but also for managing warehouses. In this panel it is also possible to see quantities for each book and addresses/warehouses where these quantites are stored.</p>
+	                <p className="treci-page1-el-tekst">Access to database manager is possible through private web page using password. In upper left menu user can choose between three manager panels. In panel "knjige" (books) shown in picture, it is possible to add/remove books, change their data and search for books in database. Each book is joined by one or more authors, other individual info and one or more addresses in one or more warehouses plus quantity in each address. Database was designed not only for web-site but also for managing warehouses. In this panel it is also possible to see quantities for each book and addresses/warehouses where these quantites are stored. <span ref={r1}>PASSWORD for access to manager is filozof2378</span></p>
 	                <a href="http://www.savicslobodan.com/demetra/login.php" className="treci-page-el-link">VIEW SITE</a>
 	            </> 
 			    }     
@@ -569,6 +578,66 @@ export function Page25({klasa="", jezik="en"}) {
 	            </> : <>
 	                <p className="page12-el-tekst page19-el-tekst-dodatno">You can see the source code of this project at:</p>
 	                <a href="https://github.com/ICalculateThereforeIUnderstand/portfolioSite" className="peti-page-el1-link page14-dodatno">GitHub</a>
+	            </>}
+	        </div>
+	    </div>
+	)
+}
+
+export function Page26({klasa="", jezik="en"}) {
+	const [r, lang] = useZajednickaLogika(klasa, jezik);
+	const [hoverRef] = useHoverLogika();
+	
+	return (
+	    <div className="page26" ref={r}>
+	        <img src="./slike/sofrab1.jpg" alt="radni display" className="page26-slika"/>
+            <div className="page12-el" ref={hoverRef}>
+	            {lang === "hr" ? <>
+	                <p className="page12-el-tekst page19-el-tekst-dodatno">Napravio sam potpuno novi site korištenjem grafičkih elemenata od prijašnjeg projekta u Wordpressu - na taj način sam uštedio vrijeme na traženju fotografija/grafičkih elemenata po internetu i mogao sam se koncentrirati na čisto html/javascript/bootstrap programiranje. Na slici je primjer efekta paralakse - središnji horizontalni interaktivni poredak slika (klikom se otvara modal veće verzije slike) se skrolanjem pomiče preko pozadine dvije fotografije jela. I same pozadine se kontinuirano skrolanjem polagano pomiču prema gore, što sam postignuo pisanjem vlastitog paralaks librarija u JavaScriptu.</p>
+	                <a href="https://savicslobodan.com/sofra1/" className="peti-page-el1-link page27-dodatno">site</a>
+	            </> : <>
+	                <p className="page12-el-tekst page19-el-tekst-dodatno">In this project, I have created completely new web site using graphical pictures/elements from previous project in Wordpress - that way I have made considerable time savings on all non-programming boring chores necessary in web design (like searching for pictures on internet, editing them, etc), and could concentrate on pure html/ Javascript/ Bootstrap coding. In this picture you can see example of parallax effect - main horizontal grid of clickable pictures (when clicked on, modal of bigger version of pic opens) moves over two big background pictures of meals, which themselves move slowly upward while user is scrolling the page. This slow move is produced in Javascript. </p>
+	                <a href="https://savicslobodan.com/sofra1/" className="peti-page-el1-link page27-dodatno">site</a>
+	            </>}
+	        </div>
+	    </div>
+	)
+}
+
+export function Page27({klasa="", jezik="en"}) {
+	const [r, lang] = useZajednickaLogika(klasa, jezik);
+	const [hoverRef] = useHoverLogika();
+	
+	return (
+	    <div className="page26" ref={r}>
+	        <img src="./slike/sofrab5.jpg" alt="radni display" className="page26-slika"/>
+            <div className="page12-el" ref={hoverRef}>
+	            {lang === "hr" ? <>
+	                <p className="page12-el-tekst page19-el-tekst-dodatno">Na slici je primjer modala koji se otvori klikom na interaktivne slike. Navbar, modal, carousel i ostale elemente sam koristio iz Bootstrapa. Navbar sam posebno prilagodio, tako da bude sticky - da ostaje na vrhu ekrana (u tom slučaju se promjeni iz tamnog prozirnog u manji bijeli navbar). Stranice su pravljene po najmodernijoj praksi responsive+mobile first dizajna. Uglavnom sam se trudio sve raditi u bootstrapu, međutim praksa je pokazala da dijelove stranica sa paralaks efektima je ipak bolje raditi u čistom html + css + JavaScriptu. Potrudio sam se da moja replika bude bolja/funkcionalnija od originalnog web sitea (pogotovo na resize transformacije). Cijeli kod možete pogledati na sljedećem linku:</p>
+	                <a href="https://github.com/ICalculateThereforeIUnderstand/RestoranWebSite" className="peti-page-el1-link page27-dodatno">Github</a>
+	            </> : <>
+	                <p className="page12-el-tekst page19-el-tekst-dodatno">In picture you can see example of modal which opens when user clicks on one of interactive pictures on web page. Navbar, modal, carousel and other elements are applied from Bootstrap. Navbar is customized to be sticky - it stays on top of window and changes color to white and becomes smaller, while at beginning is dark transparent and bigger. Internet pages are made using best and modern practices of responsive + mobile first design. I have tried to do most work in pure bootstrap, but it turned out that some parts with parallax scrolling effects are best to be made in pure html / css / javascript. I tried my best to make replica better/ more functional than original web site (especially to resize transformations). The code of this project you can find here:</p>
+	                <a href="https://github.com/ICalculateThereforeIUnderstand/RestoranWebSite" className="peti-page-el1-link page27-dodatno">Github</a>
+	            </>}
+	        </div>
+	    </div>
+	)
+}
+
+export function Page28({klasa="", jezik="en"}) {
+	const [r, lang] = useZajednickaLogika(klasa, jezik);
+	const [hoverRef] = useHoverLogika();
+	
+	return (
+	    <div className="page26" ref={r}>
+	        <img src="./slike/bezier.jpg" alt="radni display" className="page26-slika"/>
+            <div className="page12-el" ref={hoverRef}>
+	            {lang === "hr" ? <>
+	                <p className="page12-el-tekst page19-el-tekst-dodatno">Za ovaj projekt sam napisao vlastiti library za glatko i podesivo skrolanje. On je iskorišten za skrol-gumb u donjem desnom kutu koji služi za povratak na početak stranice. Pomoću ovog librarija web programer može podešavati brzinu skrola, a također korištenjem bezier krivulja i oblik gibanja skrola. Na sljedećem linku možete vidjeti demonstracijski site sa detaljnijim opisom librarija:</p>
+	                <a href="https://savicslobodan.com/smoothScroll" className="peti-page-el1-link page27-dodatno">Site</a>
+	            </> : <>
+	                <p className="page12-el-tekst page19-el-tekst-dodatno">For this project I have written my own lightweight library for smooth and customizable scrolling. It is used for scroll button in right bottom corner which returns user to beginning of internet page. Using this library, web developer can customize speed and pattern of scroll, using bezier curves. In following link you can visit demonstration site where you can find more details:</p>
+	                <a href="https://savicslobodan.com/smoothScroll" className="peti-page-el1-link page27-dodatno">Site</a>
 	            </>}
 	        </div>
 	    </div>
